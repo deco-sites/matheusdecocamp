@@ -99,7 +99,7 @@ export const share = `<svg id="share" xmlns="http://www.w3.org/2000/svg" fill="n
 		<path d="M8.7 13.3l6.6 3.4"></path>
     </svg>`;
 
-export const AvailableIcons = { ChevronLeft, ChevronRight, ChevronUp, ChevronDown, QuestionMarkCircle, User, ShoppingCart, Bars3, Heart, MagnifyingGlass, XMark, Plus, Minus, MapPin, Phone, Elos, Mastercards, Visas, Pixs, Instagram, Truck, Discount, Return, CreditCards, Deco, Discord, FilterList, Trash, WhatsApp, ArrowsPointingOut, Star, Ruler, Message, Close, Zoom, Twitter, Facebook, Linkedin, Tiktok, Elo, Diners, Mastercard, Pix, Visa, Alert, AlertInfo, AlertSuccess, AlertWarning, AlertError, share };
+
 
 // Icons for ButtonGroup widget
 
@@ -161,3 +161,8 @@ export const Lowercase = `<svg id="letter-case-lower" width="20" height="20" vie
 		<path fill-rule="evenodd" clip-rule="evenodd" d="M5.41663 10.8334C4.26603 10.8334 3.33329 11.7661 3.33329 12.9167C3.33329 14.0673 4.26603 15 5.41663 15C6.56722 15 7.49996 14.0673 7.49996 12.9167C7.49996 11.7661 6.56722 10.8334 5.41663 10.8334ZM7.52115 9.81246C6.92111 9.40486 6.19668 9.16669 5.41663 9.16669C3.34556 9.16669 1.66663 10.8456 1.66663 12.9167C1.66663 14.9878 3.34556 16.6667 5.41663 16.6667C6.19668 16.6667 6.92111 16.4285 7.52115 16.0209C7.60624 16.3908 7.93755 16.6667 8.33329 16.6667C8.79353 16.6667 9.16663 16.2936 9.16663 15.8334V10C9.16663 9.53978 8.79353 9.16669 8.33329 9.16669C7.93755 9.16669 7.60624 9.44254 7.52115 9.81246ZM14.5833 10.8334C13.4327 10.8334 12.5 11.7661 12.5 12.9167C12.5 14.0673 13.4327 15 14.5833 15C15.7339 15 16.6666 14.0673 16.6666 12.9167C16.6666 11.7661 15.7339 10.8334 14.5833 10.8334ZM16.6878 9.81246C16.0878 9.40486 15.3633 9.16669 14.5833 9.16669C12.5122 9.16669 10.8333 10.8456 10.8333 12.9167C10.8333 14.9878 12.5122 16.6667 14.5833 16.6667C15.3633 16.6667 16.0878 16.4285 16.6878 16.0209C16.7729 16.3908 17.1042 16.6667 17.5 16.6667C17.9602 16.6667 18.3333 16.2936 18.3333 15.8334V10C18.3333 9.53978 17.9602 9.16669 17.5 9.16669C17.1042 9.16669 16.7729 9.44254 16.6878 9.81246Z" fill="inherit"/>
 	</svg>`;
 
+export const copy = `<svg id="copy" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" fill="none">
+		<path d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z"/>
+	</svg>`;
+
+export const AvailableIcons = { ChevronLeft, ChevronRight, ChevronUp, ChevronDown, QuestionMarkCircle, User, ShoppingCart, Bars3, Heart, MagnifyingGlass, XMark, Plus, Minus, MapPin, Phone, Elos, Mastercards, Visas, Pixs, Instagram, Truck, Discount, Return, CreditCards, Deco, Discord, FilterList, Trash, WhatsApp, ArrowsPointingOut, Star, Ruler, Message, Close, Zoom, Twitter, Facebook, Linkedin, Tiktok, Elo, Diners, Mastercard, Pix, Visa, Alert, AlertInfo, AlertSuccess, AlertWarning, AlertError, share, Left, Center, Right, SideToSide, Default, AlignJustified, AlignLeft, AlignCenter, AlignRight, Uppercase, Lettercase, Lowercase, copy };
