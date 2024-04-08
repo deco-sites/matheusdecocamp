@@ -6,6 +6,7 @@ import WishlistButtonVtex from "../../islands/WishlistButton/vtex.tsx";
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import AddToCartButtonVTEX from "../../islands/AddToCartButton/vtex.tsx";
 import ImageCulture from "../fallback/ImageCulture.tsx";
+import BestProductCard from "../../islands/BestProduct/BestProductCard.tsx";
 
 export interface Props {
   product?: ProductDetailsPage;
@@ -73,6 +74,7 @@ export default function HorizontalProductCard(
             {formatPrice(listPrice, offers?.priceCurrency)}
           </span>
           <span>{formatPrice(price, offers?.priceCurrency)}</span>
+          <BestProductCard />
           <button class=" btn bg-success">
             Adicionar ao carrinho
           </button>

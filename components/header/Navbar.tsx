@@ -14,6 +14,7 @@ import Image from "apps/website/components/Image.tsx";
 import NavItem from "./NavItem.tsx";
 import { navbarHeight } from "./constants.ts";
 import { Buttons, Logo } from "../../components/header/Header.tsx";
+import MyLikes from "../../islands/BestProduct/MyLikes.tsx";
 
 // Make it sure to render it on the server only. DO NOT render it on an island
 function Navbar(
@@ -101,6 +102,7 @@ function Navbar(
             <SearchButton />SEARCH
           </div>
         )}
+        <MyLikes />
 
         <Searchbar searchbar={searchbar} />
         {!buttons?.hideAccountButton && (
