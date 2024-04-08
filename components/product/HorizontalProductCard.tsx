@@ -31,7 +31,7 @@ export default function HorizontalProductCard(
 
   return (
     <div class="w-full h-auto py-9">
-      <div class="flex flex-col lgflex-row gap-6 w-max max-w-[900px] py-3 px-2 border rounded-xl container">
+      <div class="flex flex-col lg:flex-row gap-6 w-max max-w-[900px] py-3 px-2 border rounded-xl container">
         <Image
           src={front.url!}
           alt={front.alternateName}
