@@ -5,6 +5,7 @@ import { useOffer } from "../../sdk/useOffer.ts";
 import WishlistButtonVtex from "../../islands/WishlistButton/vtex.tsx";
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import AddToCartButtonVTEX from "../../islands/AddToCartButton/vtex.tsx";
+import ImageCulture from "../fallback/ImageCulture.tsx";
 
 export interface Props {
   product?: ProductDetailsPage;
@@ -14,6 +15,22 @@ export interface Props {
 
 const WIDTH = 300;
 const HEIGHT = 300;
+
+export function ErrorFallback({ error }: { error?: Error }) {
+  return (
+    <ImageCulture
+      title="Novidades"
+      content="Descubra nossa pagina de Culturas"
+      alt="culturas"
+      imgDesktop="../banner-desk.jpg"
+      imgMobile="../banner-mobile.jpg"
+      button={{ href: "/culturas", label: "para saber mais" }}
+    />
+  );
+}
+export function LoadingFallback() {
+  return <div class="skeleton w-full h-[300px]"></div>;
+}
 
 export default function HorizontalProductCard(
   { product, preload, index }: Props,
