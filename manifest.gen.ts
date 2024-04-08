@@ -44,20 +44,21 @@ import * as $$$$$$32 from "./sections/Miscellaneous/CampaignTimer.tsx";
 import * as $$$$$$33 from "./sections/Miscellaneous/CookieConsent.tsx";
 import * as $$$$$$34 from "./sections/Miscellaneous/Slide.tsx";
 import * as $$$$$$35 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$36 from "./sections/Product/ImageGalleryFrontBack.tsx";
-import * as $$$$$$37 from "./sections/Product/NotFound.tsx";
-import * as $$$$$$38 from "./sections/Product/NotFoundChallenge.tsx";
-import * as $$$$$$39 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$40 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$41 from "./sections/Product/ProductShelfTabbed.tsx";
-import * as $$$$$$42 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$43 from "./sections/Product/ShelfWithImage.tsx";
-import * as $$$$$$44 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$45 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$46 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$47 from "./sections/Temp/ButtonTemperature.tsx";
-import * as $$$$$$48 from "./sections/Temp/Temperature.tsx";
-import * as $$$$$$49 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$36 from "./sections/Product/HorizontalProductCard.tsx";
+import * as $$$$$$37 from "./sections/Product/ImageGalleryFrontBack.tsx";
+import * as $$$$$$38 from "./sections/Product/NotFound.tsx";
+import * as $$$$$$39 from "./sections/Product/NotFoundChallenge.tsx";
+import * as $$$$$$40 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$41 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$42 from "./sections/Product/ProductShelfTabbed.tsx";
+import * as $$$$$$43 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$44 from "./sections/Product/ShelfWithImage.tsx";
+import * as $$$$$$45 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$46 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$47 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$48 from "./sections/Temp/ButtonTemperature.tsx";
+import * as $$$$$$49 from "./sections/Temp/Temperature.tsx";
+import * as $$$$$$50 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -107,23 +108,25 @@ const manifest = {
       $$$$$$33,
     "deco-sites/matheusdecocamp/sections/Miscellaneous/Slide.tsx": $$$$$$34,
     "deco-sites/matheusdecocamp/sections/Newsletter/Newsletter.tsx": $$$$$$35,
-    "deco-sites/matheusdecocamp/sections/Product/ImageGalleryFrontBack.tsx":
+    "deco-sites/matheusdecocamp/sections/Product/HorizontalProductCard.tsx":
       $$$$$$36,
-    "deco-sites/matheusdecocamp/sections/Product/NotFound.tsx": $$$$$$37,
+    "deco-sites/matheusdecocamp/sections/Product/ImageGalleryFrontBack.tsx":
+      $$$$$$37,
+    "deco-sites/matheusdecocamp/sections/Product/NotFound.tsx": $$$$$$38,
     "deco-sites/matheusdecocamp/sections/Product/NotFoundChallenge.tsx":
-      $$$$$$38,
-    "deco-sites/matheusdecocamp/sections/Product/ProductDetails.tsx": $$$$$$39,
-    "deco-sites/matheusdecocamp/sections/Product/ProductShelf.tsx": $$$$$$40,
+      $$$$$$39,
+    "deco-sites/matheusdecocamp/sections/Product/ProductDetails.tsx": $$$$$$40,
+    "deco-sites/matheusdecocamp/sections/Product/ProductShelf.tsx": $$$$$$41,
     "deco-sites/matheusdecocamp/sections/Product/ProductShelfTabbed.tsx":
-      $$$$$$41,
-    "deco-sites/matheusdecocamp/sections/Product/SearchResult.tsx": $$$$$$42,
-    "deco-sites/matheusdecocamp/sections/Product/ShelfWithImage.tsx": $$$$$$43,
-    "deco-sites/matheusdecocamp/sections/Product/Wishlist.tsx": $$$$$$44,
-    "deco-sites/matheusdecocamp/sections/Social/InstagramPosts.tsx": $$$$$$45,
-    "deco-sites/matheusdecocamp/sections/Social/WhatsApp.tsx": $$$$$$46,
-    "deco-sites/matheusdecocamp/sections/Temp/ButtonTemperature.tsx": $$$$$$47,
-    "deco-sites/matheusdecocamp/sections/Temp/Temperature.tsx": $$$$$$48,
-    "deco-sites/matheusdecocamp/sections/Theme/Theme.tsx": $$$$$$49,
+      $$$$$$42,
+    "deco-sites/matheusdecocamp/sections/Product/SearchResult.tsx": $$$$$$43,
+    "deco-sites/matheusdecocamp/sections/Product/ShelfWithImage.tsx": $$$$$$44,
+    "deco-sites/matheusdecocamp/sections/Product/Wishlist.tsx": $$$$$$45,
+    "deco-sites/matheusdecocamp/sections/Social/InstagramPosts.tsx": $$$$$$46,
+    "deco-sites/matheusdecocamp/sections/Social/WhatsApp.tsx": $$$$$$47,
+    "deco-sites/matheusdecocamp/sections/Temp/ButtonTemperature.tsx": $$$$$$48,
+    "deco-sites/matheusdecocamp/sections/Temp/Temperature.tsx": $$$$$$49,
+    "deco-sites/matheusdecocamp/sections/Theme/Theme.tsx": $$$$$$50,
   },
   "apps": {
     "deco-sites/matheusdecocamp/apps/decohub.ts": $$$$$$$$$$$0,
