@@ -2,12 +2,15 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$0 from "./actions/postLike.ts";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
-import * as $$$2 from "./loaders/availableIcons.ts";
-import * as $$$3 from "./loaders/icons.ts";
+import * as $$$4 from "./loaders/availableIcons.ts";
+import * as $$$5 from "./loaders/icons.ts";
 import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$1 from "./loaders/List/Sections.tsx";
+import * as $$$2 from "./loaders/Product/getAllLikes.ts";
+import * as $$$3 from "./loaders/Product/getLikesProduct.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Cards/IconCardsCarousel.tsx";
 import * as $$$$$$2 from "./sections/Cards/IconCardsCarouselWithImage.tsx";
@@ -63,10 +66,12 @@ import * as $$$$$$51 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
-    "deco-sites/matheusdecocamp/loaders/availableIcons.ts": $$$2,
-    "deco-sites/matheusdecocamp/loaders/icons.ts": $$$3,
+    "deco-sites/matheusdecocamp/loaders/availableIcons.ts": $$$4,
+    "deco-sites/matheusdecocamp/loaders/icons.ts": $$$5,
     "deco-sites/matheusdecocamp/loaders/Layouts/ProductCard.tsx": $$$0,
     "deco-sites/matheusdecocamp/loaders/List/Sections.tsx": $$$1,
+    "deco-sites/matheusdecocamp/loaders/Product/getAllLikes.ts": $$$2,
+    "deco-sites/matheusdecocamp/loaders/Product/getLikesProduct.ts": $$$3,
   },
   "sections": {
     "deco-sites/matheusdecocamp/sections/Animation/Animation.tsx": $$$$$$0,
@@ -130,6 +135,9 @@ const manifest = {
     "deco-sites/matheusdecocamp/sections/Temp/ButtonTemperature.tsx": $$$$$$49,
     "deco-sites/matheusdecocamp/sections/Temp/Temperature.tsx": $$$$$$50,
     "deco-sites/matheusdecocamp/sections/Theme/Theme.tsx": $$$$$$51,
+  },
+  "actions": {
+    "deco-sites/matheusdecocamp/actions/postLike.ts": $$$$$$$$$0,
   },
   "apps": {
     "deco-sites/matheusdecocamp/apps/decohub.ts": $$$$$$$$$$$0,

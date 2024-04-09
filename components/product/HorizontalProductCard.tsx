@@ -74,7 +74,7 @@ export default function HorizontalProductCard(
             {formatPrice(listPrice, offers?.priceCurrency)}
           </span>
           <span>{formatPrice(price, offers?.priceCurrency)}</span>
-          <BestProductCard />
+          <BestProductCard productId={productID} />
           <button class=" btn bg-success">
             Adicionar ao carrinho
           </button>

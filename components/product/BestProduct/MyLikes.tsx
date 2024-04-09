@@ -1,16 +1,27 @@
 import Icon from "../../ui/Icon.tsx";
 import { numberMyLikes } from "../../../sdk/useLikes.ts";
 import { useSignal, useSignalEffect } from "@preact/signals";
+import { invoke } from "deco-sites/matheusdecocamp/runtime.ts";
 
 export default function MyLikes() {
   const number = useSignal(0);
 
   useSignalEffect(() => {
-    number.value = numberMyLikes.value;
+    async function getLikes() {
+      const response = await invoke["deco-sites/matheusdecocamp"].loaders
+        .Product.getAllLikes({});
+      number.value = response.total;
+    }
+
+    if (numberMyLikes.value) {
+      getLikes();
+    }
+
     setInterval(() => {
-      number.value = number.value + 1;
-      console.log("teste");
+      getLikes();
     }, 30000);
+
+    getLikes();
   });
 
   return (
