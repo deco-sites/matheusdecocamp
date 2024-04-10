@@ -13,10 +13,14 @@ export default function BestProductCard({ productId }: Props) {
 
   useSignalEffect(() => {
     async function addLike() {
-      await invoke["deco-sites/matheusdecocamp"].actions.postLike({
-        productId: productId,
-      });
+      const response = await invoke["deco-sites/matheusdecocamp"].actions
+        .postLike({
+          productId: productId,
+        });
       numberMyLikes.value++;
+      if (response) {
+        likes.value = response.product;
+      }
     }
 
     async function verifyLikes() {
@@ -30,8 +34,9 @@ export default function BestProductCard({ productId }: Props) {
 
     if (clicked.value) {
       addLike();
+    } else {
+      verifyLikes();
     }
-    verifyLikes();
   });
 
   return (
