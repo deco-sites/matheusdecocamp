@@ -12,6 +12,7 @@ import { usePlatform } from "../../sdk/usePlatform.tsx";
 import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 import { clx } from "../../sdk/clx.ts";
+import HorizontalProductCard from "./HorizontalProductCard.tsx";
 
 export interface Props {
   products: Product[] | null;
@@ -74,22 +75,16 @@ function ProductShelf({
           "px-0 md:px-5 container",
         )}
       >
-        <Slider class="carousel carousel-center sm:carousel-end sm:gap-1 row-start-2 row-end-5">
+        <Slider class="carousel carousel-center overflow-y-scroll sm:gap-1 row-start-2 row-end-5 max-h-[350px] snap-center flex-row">
           {products?.map((product, index) => (
             <Slider.Item
               index={index}
               class={clx(
-                "carousel-item",
-                slideDesktop[layout?.numberOfSliders?.desktop ?? 3],
-                slideMobile[layout?.numberOfSliders?.mobile ?? 1],
+                "carousel-item w-10/12",
               )}
             >
-              <ProductCard
+              <HorizontalProductCard
                 product={product}
-                itemListName={title}
-                layout={cardLayout}
-                platform={platform}
-                index={index}
               />
             </Slider.Item>
           ))}
