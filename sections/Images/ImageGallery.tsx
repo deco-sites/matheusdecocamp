@@ -143,15 +143,24 @@ function Banner(
     >
       <Picture>
         <Source
-          width={190}
-          height={190}
+          fetchPriority="low"
+          width={150}
+          height={150}
           media="(max-width: 767px)"
           src={srcMobile}
         />
         <Source
-          width={640}
-          height={420}
-          media="(min-width: 768px)"
+          fetchPriority="low"
+          width={350}
+          height={350}
+          media="(min-width: 768px and max-width: 1023px ) "
+          src={srcDesktop || srcMobile}
+        />
+        <Source
+          fetchPriority="low"
+          width={490}
+          height={490}
+          media="(min-width: 1024px)"
           src={srcDesktop || srcMobile}
         />
         <img

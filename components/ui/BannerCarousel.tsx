@@ -139,8 +139,8 @@ function BannerItem(
           media="(max-width: 767px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
-          width={430}
-          height={590}
+          width={350}
+          height={660}
         />
         <Source
           media="(min-width: 768px)"
