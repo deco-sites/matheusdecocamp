@@ -54,7 +54,7 @@ export default function BestProductCard({ productId }: Props) {
   });
 
   return (
-    <div class="cursor-pointer flex flex-row gap-2 items-center absolute top-3 left-3">
+    <div class="cursor-pointer flex flex-row gap-2 items-center absolute top-3 left-3 z-10 bg-primary px-1 py-1 rounded">
       {!clicked.value
         ? <Icon id="moodSmile" size={24} onClick={() => clicked.value = true} />
         : <Icon id="moodCheck" size={24} />}
