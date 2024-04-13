@@ -2,14 +2,13 @@ import type { Product } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 import { formatPrice } from "../../sdk/format.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
-import WishlistButtonVtex from "../../islands/WishlistButton/vtex.tsx";
-import { ProductDetailsPage } from "apps/commerce/types.ts";
-import AddToCartButtonVTEX from "../../islands/AddToCartButton/vtex.tsx";
 import ImageCulture from "../fallback/ImageCulture.tsx";
 import BestProductCard from "../../islands/BestProduct/BestProductCard.tsx";
+import AddToCartButtonVTEX from "../../islands/AddToCartButton/vtex.tsx";
+import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
 
 export interface Props {
-  product?: Product;
+  product?: Product | null;
   preload?: boolean;
   index?: number;
 }
@@ -44,7 +43,13 @@ export default function HorizontalProductCard(
   const description = product.description || isVariantOf?.description;
   const productGroupID = isVariantOf?.productGroupID;
   const [front, back] = images ?? [];
-  const { listPrice, price, installments } = useOffer(offers);
+  const { listPrice, price, installments, seller = "1" } = useOffer(offers);
+
+  const eventItem = mapProductToAnalyticsItem({
+    product,
+    price,
+    listPrice,
+  });
 
   return (
     <div class="w-full h-auto py-2 px-1">
@@ -78,9 +83,11 @@ export default function HorizontalProductCard(
             <span class="font-bold lg:text-3xl">
               {formatPrice(price, offers?.priceCurrency)}
             </span>
-            <button class=" btn bg-success">
-              Adicionar ao carrinho
-            </button>
+            <AddToCartButtonVTEX
+              eventParams={{ items: [eventItem] }}
+              productID={productID}
+              seller={seller}
+            />
           </div>
         </div>
       </div>
