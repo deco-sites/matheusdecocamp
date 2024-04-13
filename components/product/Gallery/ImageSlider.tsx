@@ -90,7 +90,7 @@ export default function GallerySlider(props: Props) {
       {/* Dots */}
       <ul class="carousel carousel-center gap-1 px-4 sm:px-0 sm:flex-col order-2 sm:order-1">
         {images.map((img, index) => (
-          <li class="carousel-item min-w-[63px] sm:min-w-[100px]">
+          <li class="carousel-item min-w-16 sm:min-w-24">
             <Slider.Dot index={index}>
               <Image
                 style={{ aspectRatio }}

@@ -9,7 +9,7 @@ export default function Diff(props: Props) {
   const { oldImage, newImage } = props;
 
   return (
-    <div class="diff aspect-[16/9]">
+    <div class="diff aspect-video">
       <div className="diff-item-1">
         <Image
           alt={oldImage.alt}

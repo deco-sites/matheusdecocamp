@@ -10,7 +10,7 @@ export default function ButttonTemperature({ temperature }: Props) {
   }
 
   return (
-    <div class="fixed bottom-10 right-5 bg-blue-500 rounded-full p-4 w-fit h-[50px] font-bold text-white">
+    <div class="fixed bottom-10 right-5 bg-blue-500 rounded-full p-4 w-fit h-14 font-bold text-white">
       {temperature?.celsius + "ºC"}
     </div>
   );

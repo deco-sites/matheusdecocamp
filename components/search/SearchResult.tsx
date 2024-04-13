@@ -83,7 +83,7 @@ function Result({
         <div class="flex flex-row">
           {layout?.variant === "aside" && filters.length > 0 &&
             (isFirstPage || !isPartial) && (
-            <aside class="hidden sm:block w-min min-w-[250px]">
+            <aside class="hidden sm:block w-min min-w-64">
               <Filters filters={filters} />
             </aside>
           )}

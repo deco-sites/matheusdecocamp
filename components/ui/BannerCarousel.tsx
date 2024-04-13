@@ -119,7 +119,7 @@ function BannerItem(
       class="relative overflow-y-hidden w-full"
     >
       {action && (
-        <div class="absolute top-0 md:bottom-0 bottom-1/2 left-0 right-0 sm:right-auto max-w-[407px] flex flex-col justify-end gap-4 px-8 py-12">
+        <div class="absolute bottom-0 left-0 right-0 sm:right-auto max-w-md flex flex-col justify-end gap-4 px-8 py-12">
           <span class="text-2xl font-light text-base-100">
             {action.title}
           </span>
@@ -140,7 +140,7 @@ function BannerItem(
           fetchPriority={lcp ? "high" : "auto"}
           src={mobile}
           width={350}
-          height={660}
+          height={450}
         />
         <Source
           media="(min-width: 768px)"
@@ -153,6 +153,8 @@ function BannerItem(
           class="object-cover w-full h-full"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
+          width={350}
+          height={450}
           alt={alt}
         />
       </Picture>
@@ -226,7 +228,7 @@ function BannerCarousel(props: Props) {
   return (
     <div
       id={id}
-      class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] sm:min-h-min min-h-[660px]"
+      class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px] sm:min-h-min "
     >
       <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-6">
         {images?.map((image, index) => {

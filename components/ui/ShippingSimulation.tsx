@@ -43,7 +43,7 @@ function ShippingContent({ simulation }: {
   }
 
   return (
-    <ul class="flex flex-col gap-4 p-4 bg-base-200 rounded-[4px]">
+    <ul class="flex flex-col gap-4 p-4 bg-base-200 rounded-md">
       {methods.map((method) => (
         <li class="flex justify-between items-center border-base-200 not-first-child:border-t">
           <span class="text-button text-center">

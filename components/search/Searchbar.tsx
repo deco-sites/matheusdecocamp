@@ -165,7 +165,7 @@ function Searchbar({
               {products.map((product, index) => (
                 <Slider.Item
                   index={index}
-                  class="carousel-item first:ml-4 last:mr-4 min-w-[200px] max-w-[200px]"
+                  class="carousel-item first:ml-4 last:mr-4 min-w-48 max-w-48"
                 >
                   <ProductCard
                     product={product}

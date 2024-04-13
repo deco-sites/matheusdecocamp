@@ -75,7 +75,7 @@ function ProductShelf({
           "px-0 container",
         )}
       >
-        <Slider class="carousel carousel-center overflow-y-scroll sm:gap-1 row-start-2 row-end-5 max-h-[350px] snap-center flex-row">
+        <Slider class="carousel carousel-center overflow-y-scroll sm:gap-1 row-start-2 row-end-5 max-h-96 snap-center flex-row">
           {products?.map((product, index) => (
             <Slider.Item
               index={index}

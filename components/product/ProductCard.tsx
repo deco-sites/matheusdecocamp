@@ -176,7 +176,7 @@ function ProductCard({
           </div>
           {/* Discount % */}
           {!l?.hide?.discount && (
-            <div class="text-sm bg-base-100 p-[10px]">
+            <div class="text-sm bg-base-100 p-2">
               <span class="text-base-content font-bold">
                 {listPrice && price
                   ? `${Math.round(((listPrice - price) / listPrice) * 100)}% `

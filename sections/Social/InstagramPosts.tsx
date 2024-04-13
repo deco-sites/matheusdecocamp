@@ -90,7 +90,7 @@ export default function InstagramPosts({
             href={item.permalink}
             target="_blank"
             title="Visite nosso instagram"
-            class="rounded-lg overflow-hidden w-full max-w-[350px] sm:max-w-[350px] group"
+            class="rounded-lg overflow-hidden w-full max-w-xs group"
           >
             {item.media_type === "IMAGE"
               ? (

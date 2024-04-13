@@ -46,28 +46,28 @@ export default function ImageGallery({
       </p>
       <div class="grid grid-cols-2 gap-4 mt-11 lg:flex lg:gap-8 lg:mt-20">
         <Image
-          class="min-w-full object-cover max-w-[156px] max-h-[156px] "
+          class="min-w-full object-cover max-w-40 max-h-40 "
           src={imageOne}
           alt={alt}
           width={156}
           height={156}
         />
         <Image
-          class="min-w-full object-cover max-w-[156px] max-h-[156px] "
+          class="min-w-full object-cover max-w-40 max-h-40 "
           src={imageTwo}
           alt={alt}
           width={156}
           height={156}
         />
         <Image
-          class="min-w-full object-cover max-w-[156px] max-h-[156px] "
+          class="min-w-full object-cover max-w-40 max-h-40 "
           src={imageThree}
           alt={alt}
           width={156}
           height={156}
         />
         <Image
-          class="min-w-full object-cover max-w-[156px] max-h-[156px] "
+          class="min-w-full object-cover max-w-40 max-h-40 "
           src={imageFour}
           alt={alt}
           width={156}

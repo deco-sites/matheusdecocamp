@@ -29,7 +29,7 @@ export function ErrorFallback({ error }: { error?: Error }) {
   );
 }
 export function LoadingFallback() {
-  return <div class="skeleton w-full h-[300px]"></div>;
+  return <div class="skeleton w-full h-80"></div>;
 }
 
 export default function HorizontalProductCard(
@@ -53,13 +53,13 @@ export default function HorizontalProductCard(
 
   return (
     <div class="w-full h-auto py-2 px-1 group ">
-      <div class="flex w-full flex-row py-2 px-1 sm:px-2 border rounded-xl container relative shadow-md max-w-[350px] sm:max-w-[450px] lg:max-w-none lg:w-[750px] xl:w-[950px]">
+      <div class="flex w-full flex-row py-2 px-1 sm:px-2 border rounded-xl container relative shadow-md max-w-80 sm:max-w-md lg:w-screen lg:max-w-3xl xl:max-w-4xl ">
         <Image
           src={front.url!}
           alt={front.alternateName}
           width={WIDTH}
           height={HEIGHT}
-          class={`col-span-full row-span-full rounded duration-100 transition-scale scale-100 max-w-[200px] max-h-[200px] object-contain m-auto w-2/5 lg:w-5/12 `}
+          class={`col-span-full row-span-full rounded duration-100 transition-scale scale-100 max-w-52 max-h-52 object-contain m-auto w-2/5 lg:w-5/12 `}
           sizes="(max-width: 640px) 50vw, 20vw"
           preload={preload}
           loading={preload ? "eager" : "lazy"}

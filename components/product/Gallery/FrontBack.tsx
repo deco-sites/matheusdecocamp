@@ -31,7 +31,7 @@ function GalleryFrontBack(props: Props) {
       {[images[0], images[1] ?? images[0]].map((img, index) => (
         <li class="carousel-item">
           <Image
-            class="w-screen sm:w-[24vw]"
+            class="w-screen sm:w-fit"
             sizes="(max-width: 640px) 100vw, 24vw"
             style={{ aspectRatio }}
             src={img.url!}

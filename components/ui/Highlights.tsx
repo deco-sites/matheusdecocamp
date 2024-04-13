@@ -25,12 +25,12 @@ function Highlights({ highlights = [], title }: Props) {
         {highlights.map(({ href, src, alt, label }, index) => (
           <Slider.Item
             index={index}
-            class="carousel-item first:ml-6 sm:first:ml-0 last:mr-6 sm:last:mr-0 min-w-[190px]"
+            class="carousel-item first:ml-6 sm:first:ml-0 last:mr-6 sm:last:mr-0 min-h-48"
           >
             <a href={href} class="card card-compact bg-base-100">
               <figure>
                 <Image
-                  class="rounded-[40px]"
+                  class="rounded-3xl"
                   src={src}
                   alt={alt}
                   width={190}
