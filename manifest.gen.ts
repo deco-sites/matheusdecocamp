@@ -11,6 +11,7 @@ import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$1 from "./loaders/List/Sections.tsx";
 import * as $$$2 from "./loaders/Product/getAllLikes.ts";
 import * as $$$3 from "./loaders/Product/getLikesProduct.ts";
+import * as $$$$$$$0 from "./matchers/umt.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Cards/IconCardsCarousel.tsx";
 import * as $$$$$$2 from "./sections/Cards/IconCardsCarouselWithImage.tsx";
@@ -135,6 +136,9 @@ const manifest = {
     "deco-sites/matheusdecocamp/sections/Temp/ButtonTemperature.tsx": $$$$$$49,
     "deco-sites/matheusdecocamp/sections/Temp/Temperature.tsx": $$$$$$50,
     "deco-sites/matheusdecocamp/sections/Theme/Theme.tsx": $$$$$$51,
+  },
+  "matchers": {
+    "deco-sites/matheusdecocamp/matchers/umt.ts": $$$$$$$0,
   },
   "actions": {
     "deco-sites/matheusdecocamp/actions/postLike.ts": $$$$$$$$$0,
