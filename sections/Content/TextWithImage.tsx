@@ -1,5 +1,6 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import type { HTMLWidget } from "apps/admin/widgets.ts";
+import Image from "apps/website/components/Image.tsx";
 
 export interface ServiceProps {
   type?: string;
@@ -7,6 +8,7 @@ export interface ServiceProps {
   description?: HTMLWidget;
   image: ImageWidget;
   placement: "left" | "right";
+  preload?: boolean;
 }
 
 export interface Props {
@@ -28,6 +30,7 @@ export default function Services({
       image:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/3290/488e5dc5-9a24-48c9-9795-09b97394fb5f",
       placement: "left",
+      preload: false,
     },
   ],
 }: Props) {
@@ -40,13 +43,16 @@ export default function Services({
             PLACEMENT[service.placement]
           } gap-12 md:gap-20 text-left items-center justify-evenly`}
         >
-          <img
+          <Image
             class="w-full lg:w-1/2 flex-1 object-cover rounded-xl aspect-[31/21]"
             sizes="(max-width: 640px) 100vw, 30vw"
             src={service.image}
             alt={service.label}
             decoding="async"
-            loading="lazy"
+            width={300}
+            height={332}
+            loading={service.preload ? "eager" : "lazy"}
+            fetchPriority={service.preload ? "high" : "low"}
           />
           <div class="w-full lg:w-1/2 flex-1 space-y-2 lg:space-y-4 lg:max-w-xl gap-4">
             {service.type && <p>{service.type}</p>}

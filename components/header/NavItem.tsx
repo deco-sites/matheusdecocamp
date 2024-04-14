@@ -28,6 +28,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
                 width={300}
                 height={332}
                 loading="lazy"
+                fetchPriority={"low"}
               />
             )}
             <ul class="flex items-start justify-center gap-6">

@@ -156,6 +156,7 @@ function BannerItem(
           width={350}
           height={450}
           alt={alt}
+          decoding="async"
         />
       </Picture>
     </a>
