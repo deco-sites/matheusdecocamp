@@ -2,7 +2,6 @@ import { ProductDetailsPage } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 import Icon from "../../../components/ui/Icon.tsx";
 import Slider from "../../../components/ui/Slider.tsx";
-import ProductImageZoom from "../../../islands/ProductImageZoom.tsx";
 import SliderJS from "../../../islands/SliderJS.tsx";
 import { useId } from "../../../sdk/useId.ts";
 
@@ -34,7 +33,7 @@ export default function GallerySlider(props: Props) {
     layout,
   } = props;
 
-  const { width, height } = layout || { width: 300, height: 370 };
+  const { width, height } = layout || { width: 360, height: 440 };
 
   const aspectRatio = `${width} / ${height}`;
 
@@ -59,6 +58,8 @@ export default function GallerySlider(props: Props) {
                 // Preload LCP image for better web vitals
                 preload={index === 0}
                 loading={index === 0 ? "eager" : "lazy"}
+                fetchPriority={index === 0 ? "high" : "low"}
+                decoding="async"
               />
             </Slider.Item>
           ))}
@@ -77,14 +78,6 @@ export default function GallerySlider(props: Props) {
         >
           <Icon size={24} id="ChevronRight" strokeWidth={3} />
         </Slider.NextButton>
-
-        <div class="absolute top-2 right-2 bg-base-100 rounded-full">
-          <ProductImageZoom
-            images={images}
-            width={700}
-            height={Math.trunc(700 * height / width)}
-          />
-        </div>
       </div>
 
       {/* Dots */}
@@ -98,7 +91,11 @@ export default function GallerySlider(props: Props) {
                 width={100}
                 height={123}
                 src={img.url!}
+                srcSet={img.url!}
                 alt={img.alternateName}
+                loading={"lazy"}
+                fetchPriority={"low"}
+                decoding="async"
               />
             </Slider.Dot>
           </li>
