@@ -17,6 +17,7 @@ export interface Props {
   image?: ImageWidget;
   placement: "left" | "right";
   cta: CTA[];
+  preload?: boolean;
 }
 
 const PLACEMENT = {
@@ -30,6 +31,7 @@ export default function HeroFlats({
   image,
   placement,
   cta,
+  preload = false,
 }: Props) {
   return (
     <div>
@@ -43,13 +45,15 @@ export default function HeroFlats({
         >
           {image && (
             <Image
-              width={640}
+              width={360}
+              height={202}
               class="w-full lg:w-1/2 object-fit"
               sizes="(max-width: 640px) 100vw, 30vw"
               src={image}
               alt={image}
               decoding="async"
-              loading="lazy"
+              loading={preload ? "eager" : "lazy"}
+              fetchPriority={preload ? "high" : "low"}
             />
           )}
           <div

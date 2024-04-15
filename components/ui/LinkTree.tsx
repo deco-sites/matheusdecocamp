@@ -158,7 +158,7 @@ function Links(props: Props) {
               <a
                 target="_blank"
                 href={link.href}
-                class="group h-[52px] px-6 rounded-full flex justify-start items-center font-bold gap-4"
+                class="group h-14 px-6 rounded-full flex justify-start items-center font-bold gap-4"
                 style={ColorsNeutralAndHover}
               >
                 {Boolean(link.icon) && (
@@ -255,7 +255,7 @@ function BaseContainer(props: {
         backgroundColor: backgroundColors ? backgroundColors : undefined,
       }}
     >
-      <div class="flex flex-col items-center gap-12 p-10 max-w-[640px] w-full">
+      <div class="flex flex-col items-center gap-12 p-10 max-w-screen-sm w-full">
         {props.children}
       </div>
     </div>

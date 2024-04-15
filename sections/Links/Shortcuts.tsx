@@ -49,7 +49,7 @@ export default function Shortcuts({
           <a
             href={shortcut.link}
             target="_blank"
-            class={`flex items-center h-10 bg-base-100 text-base-content hover:bg-base-content hover:text-base-100 border-2 border-neutral mt-[-2px] ${
+            class={`flex items-center h-10 bg-base-100 text-base-content hover:bg-base-content hover:text-base-100 border-2 border-neutral -mt-1 ${
               onHover === "Show tooltip" && "tooltip tooltip-left"
             }`}
             data-tip={shortcut.label}
@@ -58,7 +58,7 @@ export default function Shortcuts({
               {shortcut.icon && <Icon id={shortcut.icon} size={24} />}
             </div>
             {(!onHover || onHover === "Show label") && (
-              <div class="flex-none max-w-0 lg:group-hover:max-w-[200px] lg:group-hover:w-auto lg:group-hover:pr-2 duration-200">
+              <div class="flex-none max-w-0 lg:group-hover:max-w-52 lg:group-hover:w-auto lg:group-hover:pr-2 duration-200">
                 {shortcut.label}
               </div>
             )}

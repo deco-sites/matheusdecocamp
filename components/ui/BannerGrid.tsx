@@ -125,15 +125,15 @@ export default function BannnerGrid(props: Props) {
   } = { ...DEFAULT_PROPS, ...props };
 
   return (
-    <section class="container w-full px-4 md:px-0 mx-auto">
+    <section class="container w-full px-4 md:px-0 mx-auto py-8">
       {title &&
         (
-          <div class="py-6 md:py-0 md:pb-[40px] flex items-center mt-6">
+          <div class="py-6 md:py-0 md:pb-10 flex items-center mt-6">
             <h2 class="text-lg leading-5 font-semibold uppercase">
               {title}
             </h2>
 
-            <div class="bg-[#e5e5ea] h-[1px] w-full ml-4"></div>
+            <div class="bg-[#e5e5ea] h-1 w-full ml-4"></div>
           </div>
         )}
       <div

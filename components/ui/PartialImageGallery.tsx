@@ -18,7 +18,7 @@ export interface Props {
 export default function PartialImageGallery({ imgs, count }: Props) {
   return (
     <div class="w-full h-auto flex flex-col items-center justify-center gap-3 py-6">
-      <div class="flex flex-row flex-wrap gap-3 container w-full">
+      <div class="flex flex-col sm:flex-row flex-wrap gap-3 container w-full justify-center sm:px-0 px-1">
         {imgs?.map((img, index) => {
           if (index < count) {
             return (
@@ -29,7 +29,7 @@ export default function PartialImageGallery({ imgs, count }: Props) {
                 height={100}
                 loading="lazy"
                 decoding="async"
-                class="w-[calc(33%-0.75rem)]"
+                class="w-full sm:w-[calc(33%-0.75rem)]  object-cover rounded-lg hover:scale-105 duration-300 ease-in hover:opacity-90 max-h-64"
               />
             );
           }

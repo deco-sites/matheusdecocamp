@@ -70,17 +70,17 @@ function ProductShelf({
       <div
         id={id}
         class={clx(
-          "grid",
+          "flex lg:grid",
           layout?.showArrows && "grid-cols-[48px_1fr_48px]",
-          "px-0 md:px-5 container",
+          "px-0 container",
         )}
       >
-        <Slider class="carousel carousel-center overflow-y-scroll sm:gap-1 row-start-2 row-end-5 max-h-[350px] snap-center flex-row">
+        <Slider class="carousel carousel-center overflow-y-scroll sm:gap-1 row-start-2 row-end-5 max-h-96 snap-center flex-row">
           {products?.map((product, index) => (
             <Slider.Item
               index={index}
               class={clx(
-                "carousel-item w-10/12",
+                "carousel-item",
               )}
             >
               <HorizontalProductCard
@@ -92,12 +92,12 @@ function ProductShelf({
 
         {layout?.showArrows && (
           <>
-            <div class="relative block z-10 col-start-1 row-start-3">
+            <div class="relative hidden lg:block z-10 col-start-1 row-start-3">
               <Slider.PrevButton class="absolute w-12 h-12 flex justify-center items-center">
                 <Icon size={24} id="ChevronLeft" strokeWidth={3} class="w-5" />
               </Slider.PrevButton>
             </div>
-            <div class="relative block z-10 col-start-3 row-start-3">
+            <div class="relative hidden lg:block z-10 col-start-3 row-start-3">
               <Slider.NextButton class="absolute w-12 h-12 flex justify-center items-center">
                 <Icon size={24} id="ChevronRight" strokeWidth={3} />
               </Slider.NextButton>

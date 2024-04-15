@@ -48,10 +48,14 @@ export default function FooterItems(
             {sections.map((section) => (
               <li>
                 <div class="collapse collapse-arrow ">
-                  <input id={section.label} type="checkbox" class="min-h-[0]" />
+                  <input
+                    id={section.label}
+                    type="checkbox"
+                    class="min-h-none"
+                  />
                   <label
                     htmlFor={section.label}
-                    class="collapse-title min-h-[0] !p-0 flex gap-2"
+                    class="collapse-title min-h-none !p-0 flex gap-2"
                   >
                     <span>{section.label}</span>
                   </label>

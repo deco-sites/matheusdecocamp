@@ -3,6 +3,8 @@ import Icon from "../../ui/Icon.tsx";
 import { numberMyLikes } from "../../../sdk/useLikes.ts";
 import { invoke } from "deco-sites/matheusdecocamp/runtime.ts";
 import { Bounce, toast, ToastContainer } from "react-toastify";
+import { sendScoreEvent } from "../../../sdk/analytics.tsx";
+import ToastCss from "../../Toast/ToastCss.tsx";
 export interface Props {
   productId: string;
 }
@@ -25,15 +27,22 @@ export default function BestProductCard({ productId }: Props) {
       }
       toast.success("Obrigado por votar! 🤝", {
         position: "top-right",
-        autoClose: 2000,
+        autoClose: 5000,
         hideProgressBar: false,
-        closeOnClick: false,
+        icon: false,
+        closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        icon: false,
-        theme: "dark",
+        theme: "colored",
         transition: Bounce,
+      });
+
+      sendScoreEvent({
+        name: "post_score",
+        params: {
+          score: Number(response?.total),
+        },
       });
     }
 
@@ -54,7 +63,7 @@ export default function BestProductCard({ productId }: Props) {
   });
 
   return (
-    <div class="cursor-pointer flex flex-row gap-2 items-center absolute top-3 left-3">
+    <div class="cursor-pointer flex flex-row gap-2 items-center absolute top-3 left-3 z-10 bg-primary px-1 py-1 rounded">
       {!clicked.value
         ? <Icon id="moodSmile" size={24} onClick={() => clicked.value = true} />
         : <Icon id="moodCheck" size={24} />}

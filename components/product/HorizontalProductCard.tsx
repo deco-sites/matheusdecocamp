@@ -29,7 +29,7 @@ export function ErrorFallback({ error }: { error?: Error }) {
   );
 }
 export function LoadingFallback() {
-  return <div class="skeleton w-full h-[300px]"></div>;
+  return <div class="skeleton w-full h-80"></div>;
 }
 
 export default function HorizontalProductCard(
@@ -52,24 +52,27 @@ export default function HorizontalProductCard(
   });
 
   return (
-    <div class="w-full h-auto py-2 px-1">
-      <div class="flex w-full flex-row max-w-[900px] py-2 px-1 border rounded-xl container relative shadow-md">
+    <div class="w-full h-auto py-2 px-1 group ">
+      <div class="flex w-full flex-row py-2 px-1 sm:px-2 border rounded-xl container relative shadow-md max-w-80 sm:max-w-md lg:w-screen lg:max-w-3xl xl:max-w-4xl ">
         <Image
           src={front.url!}
           alt={front.alternateName}
           width={WIDTH}
           height={HEIGHT}
-          class={`bg-base-100 col-span-full row-span-full rounded duration-100 transition-scale scale-100 lg:group-hover:scale-125 max-w-[250px] m-auto w-2/5 lg:w-5/12`}
+          class={`col-span-full row-span-full rounded duration-100 transition-scale scale-100 max-w-52 max-h-52 object-contain m-auto w-2/5 lg:w-5/12 `}
           sizes="(max-width: 640px) 50vw, 20vw"
           preload={preload}
           loading={preload ? "eager" : "lazy"}
           decoding="async"
         />
         <BestProductCard productId={productID} />
-        <div class="flex flex-col gap-2 w-3/5 lg:w-3/5 lg:flex-row">
+        <a
+          href={url}
+          class="flex flex-col gap-2 w-3/5 lg:w-3/5 lg:flex-row justify-between lg:justify-start cursor-pointer"
+        >
           <div class="flex flex-col lg:gap-3 lg:w-3/5">
             <h2
-              class=" text-lg lg:text-2xl font-semibold"
+              class=" text-lg lg:text-2xl font-semibold truncate lg:whitespace-normal"
               dangerouslySetInnerHTML={{ __html: name ?? "" }}
             >
             </h2>
@@ -89,7 +92,7 @@ export default function HorizontalProductCard(
               seller={seller}
             />
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );

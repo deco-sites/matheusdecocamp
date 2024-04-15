@@ -4,6 +4,7 @@ import Button from "../../../components/ui/Button.tsx";
 import { sendEvent } from "../../../sdk/analytics.tsx";
 import { useUI } from "../../../sdk/useUI.ts";
 import { Bounce, toast, ToastContainer } from "react-toastify";
+import ToastCss from "../../Toast/ToastCss.tsx";
 
 export interface Props {
   /** @description: sku name */
@@ -61,6 +62,7 @@ export default function AddToCartButton(props: Props) {
         Adicionar à Sacola
       </Button>
       <ToastContainerComponent />
+      <ToastCss />
     </>
   );
 }
