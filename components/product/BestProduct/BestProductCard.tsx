@@ -4,6 +4,7 @@ import { numberMyLikes } from "../../../sdk/useLikes.ts";
 import { invoke } from "deco-sites/matheusdecocamp/runtime.ts";
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import { sendScoreEvent } from "../../../sdk/analytics.tsx";
+import ToastCss from "../../Toast/ToastCss.tsx";
 export interface Props {
   productId: string;
 }
@@ -28,6 +29,7 @@ export default function BestProductCard({ productId }: Props) {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
+        icon: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
