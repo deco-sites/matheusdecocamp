@@ -3,6 +3,7 @@ import Icon from "../../ui/Icon.tsx";
 import { numberMyLikes } from "../../../sdk/useLikes.ts";
 import { invoke } from "deco-sites/matheusdecocamp/runtime.ts";
 import { Bounce, toast, ToastContainer } from "react-toastify";
+import { sendScoreEvent } from "../../../sdk/analytics.tsx";
 export interface Props {
   productId: string;
 }
@@ -25,15 +26,21 @@ export default function BestProductCard({ productId }: Props) {
       }
       toast.success("Obrigado por votar! 🤝", {
         position: "top-right",
-        autoClose: 2000,
+        autoClose: 5000,
         hideProgressBar: false,
-        closeOnClick: false,
+        closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        icon: false,
-        theme: "dark",
+        theme: "colored",
         transition: Bounce,
+      });
+
+      sendScoreEvent({
+        name: "post_score",
+        params: {
+          score: Number(response?.total),
+        },
       });
     }
 
