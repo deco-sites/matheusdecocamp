@@ -17,7 +17,7 @@ export default function ImageCulture(props: Props) {
   const { title, content, button, imgMobile, imgDesktop, alt } = props;
 
   return (
-    <div class="flex-col flex w-full h-auto gap-3 text-center">
+    <div class="flex-col flex w-full h-auto gap-3 text-center mb-8 mt-11">
       {title && <h2 class="text-3xl">{title}</h2>}
       {content && (
         <span class={"text-base"} dangerouslySetInnerHTML={{ __html: content }}>
@@ -49,7 +49,7 @@ export default function ImageCulture(props: Props) {
       </Picture>
       {button?.href &&
         (
-          <a class="btn bg-primary" href={button?.href}>
+          <a class="btn bg-primary max-w-52 mx-auto" href={button?.href}>
             {button?.label}
           </a>
         )}

@@ -2,7 +2,6 @@ import type { Product } from "apps/commerce/types.ts";
 import Image from "apps/website/components/Image.tsx";
 import { formatPrice } from "../../sdk/format.ts";
 import { useOffer } from "../../sdk/useOffer.ts";
-import ImageCulture from "../fallback/ImageCulture.tsx";
 import BestProductCard from "../../islands/BestProduct/BestProductCard.tsx";
 import AddToCartButtonVTEX from "../../islands/AddToCartButton/vtex.tsx";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
@@ -15,22 +14,6 @@ export interface Props {
 
 const WIDTH = 300;
 const HEIGHT = 300;
-
-export function ErrorFallback({ error }: { error?: Error }) {
-  return (
-    <ImageCulture
-      title="Novidades"
-      content="Descubra nossa pagina de Culturas"
-      alt="culturas"
-      imgDesktop="../banner-desk.jpg"
-      imgMobile="../banner-mobile.jpg"
-      button={{ href: "/culturas", label: "para saber mais" }}
-    />
-  );
-}
-export function LoadingFallback() {
-  return <div class="skeleton w-full h-80"></div>;
-}
 
 export default function HorizontalProductCard(
   { product, preload, index }: Props,
